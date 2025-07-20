@@ -1538,9 +1538,9 @@ elif st.session_state.page == "t2p1":
             "<strong>「5万ドル超(>$50,000)」</strong>と予想します。<br>48歳で大学院修士の学歴を持ち、地方政府の管理職に長年勤務していると考えられ、経験と職責に見合う報酬として年収は5万ドル超と予測しました。"
         ]
 
-        st.session_state.AI_message = [AI_message_1, AI_message_2, AI_message_3, AI_message_4, AI_message_5, AI_message_6, AI_message_7, AI_message_8, AI_message_9, AI_message_10, AI_message_11, AI_message_12, AI_message_13, AI_message_14, AI_message_15]
+        st.session_state.AI_message = [AI_message_1, AI_message_2, AI_message_3, AI_message_4, AI_message_5, AI_message_6, AI_message_7, AI_message_8, AI_message_9, AI_message_10, AI_message_11, AI_message_12, AI_message_13, AI_message_14, AI_message_15, AI_message_16, AI_message_17, AI_message_18, AI_message_19, AI_message_20]
 
-        st.session_state.cell_num = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O"]
+        st.session_state.cell_num = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T"]
 
         st.session_state.page_num = 0
 
