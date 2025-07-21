@@ -11,6 +11,7 @@ import pandas as pd
 import copy
 from PIL import Image
 import numpy as np
+from google.cloud import storage
 
 # Google Driveの認証設定
 scopes = ['https://spreadsheets.google.com/feeds',
@@ -239,7 +240,14 @@ if st.session_state.page == "home":
                 max_retries=3
 
                 retries = 0
+                client = storage.Client(project="prj1questionnaire")
 
+                bucket = client.get_bucket('prj1_2_pretest')
+                df = pd.DataFrame({
+                    '項目': ['年齢', '職業', '職業分類', '1週間の勤務時間', '教育レベル', '人種', '性別', '婚姻状況', '出身国'],
+                    '内容': ['35歳', '機械操作・検査', '民間企業', '40時間', '高校卒業', '白人', '男性', '既婚', 'メキシコ']
+                })
+                bucket.blob("test2.csv").upload_from_string(df.to_csv(), 'text/csv')
                 
                 while retries <= max_retries:
                     try:
